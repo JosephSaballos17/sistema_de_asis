@@ -10,11 +10,11 @@ namespace sistema_de_asis
 {
     public class Universidad
     {
-        public class estudiante
+        public class Estudiante
         {
             // Variables para el estudiante 
 
-            public string nombre { get; set; }
+            public string Nombre { get; set; }
             public double numerosesionesTotales { get; set; }
             public double numerosesionesAsistidas { get; set; }
 
@@ -37,7 +37,7 @@ namespace sistema_de_asis
 
             public void mostrarinfo()
             {
-                Console.WriteLine($"nombre : {nombre} numero de sesiones totales: {numerosesionesTotales}, numero de sesiones asistidas: {numerosesionesAsistidas}");
+                Console.WriteLine($"nombre : {Nombre} numero de sesiones totales: {numerosesionesTotales}, numero de sesiones asistidas: {numerosesionesAsistidas}");
 
 
                 double asistencia = Asistencia.MostrarPorcentaje(numerosesionesAsistidas, numerosesionesTotales);

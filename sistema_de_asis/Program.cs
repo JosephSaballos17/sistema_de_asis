@@ -6,7 +6,7 @@ namespace sistema_de_asis
     class program
     {
 
-        public void Main(string[] args)
+        public static void Main(string[] args)
         {
 
             double asistenciasTotales = 0;
@@ -63,7 +63,7 @@ namespace sistema_de_asis
                 do
                 {
 
-                    Console.WriteLine("Imgrese las Sesiones Asistidas: ");
+                    Console.WriteLine("Ingrese las Sesiones Asistidas: ");
                     cantidadasistenias[i] = Convert.ToDouble(Console.ReadLine());
                     if (cantidadasistenias[i] < 0)
                     {
@@ -75,10 +75,10 @@ namespace sistema_de_asis
                 } while (cantidadasistenias[i] < 0);
 
 
-                var informacion = new Universidad.estudiante()
+                var informacion = new Universidad.Estudiante()
                 {
 
-                    nombre = cantidadnombres[i],
+                    Nombre = cantidadnombres[i],
                     numerosesionesTotales = asistenciasTotales,
                     numerosesionesAsistidas = cantidadasistenias[i],
 
