@@ -10,60 +10,63 @@ namespace sistema_de_asis
 {
     public class Universidad
     {
-        // Variables para el estudiante 
-
-        public string nombre { get; set; }
-        public double numerosesionesTotales { get; set; }
-        public double numerosesionesAsistidas { get; set; }
-
-        public class Asistencia
+        public class estudiante
         {
+            // Variables para el estudiante 
 
-            //Metodo para mostrar la asistencia 
-            public static double MostrarPorcentaje(double sesionesAsistidas, double sesionesTotales)
+            public string nombre { get; set; }
+            public double numerosesionesTotales { get; set; }
+            public double numerosesionesAsistidas { get; set; }
+
+            public class Asistencia
             {
 
-                return (double)sesionesAsistidas / sesionesTotales * 100;
-
-                if (sesionesTotales == 0)
+                //Metodo para mostrar la asistencia 
+                public static double MostrarPorcentaje(double sesionesAsistidas, double sesionesTotales)
                 {
-                    return 0;
+
+                    return (double)sesionesAsistidas / sesionesTotales * 100;
+
+                    if (sesionesTotales == 0)
+                    {
+                        return 0;
+                    }
                 }
             }
-        }
 
 
-        public void mostrarinfo()
-        {
-            Console.WriteLine($"nombre : {nombre} numero de sesiones totales: {numerosesionesTotales}, numero de sesiones asistidas: {numerosesionesAsistidas}");
-
-
-            double asistencia = Asistencia.MostrarPorcentaje(numerosesionesAsistidas, numerosesionesTotales);
-
-            // Validacion de la asistencia 
-
-            if (asistencia >= 75)
+            public void mostrarinfo()
             {
-                Console.WriteLine("El estudiante cumple con el requisito de asistencia.");
+                Console.WriteLine($"nombre : {nombre} numero de sesiones totales: {numerosesionesTotales}, numero de sesiones asistidas: {numerosesionesAsistidas}");
+
+
+                double asistencia = Asistencia.MostrarPorcentaje(numerosesionesAsistidas, numerosesionesTotales);
+
+                // Validacion de la asistencia 
+
+                if (asistencia >= 75)
+                {
+                    Console.WriteLine("El estudiante cumple con el requisito de asistencia.");
+                }
+                else
+                {
+
+                    Console.WriteLine("Lo siento, el estudiante no cumple con el requisito de asistencia.");
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
             }
-            else
-            {
-
-                Console.WriteLine("Lo siento, el estudiante no cumple con el requisito de asistencia.");
-            }
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
     }
 }
