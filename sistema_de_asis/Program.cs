@@ -72,6 +72,19 @@ namespace sistema_de_asis
                     }
 
 
+                } while (cantidadasistenias[i] < 0);
+
+
+                var informacion = new Universidad.Estudiante
+                {
+
+                    nombre = cantidadnombres[i],
+                    numerosesionesTotales = asistenciasTotales,
+                    numerosesionesAsistidas = cantidadasistenias[i],
+
+                };
+
+            }
 
 
 
@@ -97,13 +110,12 @@ namespace sistema_de_asis
 
 
 
-                }
+        }
+
+
+
 
 
     }
-
-
-
-
 
 }
