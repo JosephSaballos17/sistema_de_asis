@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static sistema_de_asis.Universidad;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace sistema_de_asis
 {
@@ -27,11 +29,35 @@ namespace sistema_de_asis
                 {
                     return 0;
                 }
-
-
-
-
             }
+        }
+
+
+        public void mostrarinfo()
+        {
+            Console.WriteLine($"nombre : {nombre} numero de sesiones totales: {numerosesionesTotales}, numero de sesiones asistidas: {numerosesionesAsistidas}");
+
+
+            double asistencia = Asistencia.MostrarPorcentaje(numerosesionesAsistidas, numerosesionesTotales);
+
+            // Validacion de la asistencia 
+
+            if (asistencia >= 75)
+            {
+                Console.WriteLine("El estudiante cumple con el requisito de asistencia.");
+            }
+            else
+            {
+
+                Console.WriteLine("Lo siento, el estudiante no cumple con el requisito de asistencia.");
+            }
+
+
+
+
+
+
+
 
 
 
@@ -41,3 +67,4 @@ namespace sistema_de_asis
         }
     }
 }
+
