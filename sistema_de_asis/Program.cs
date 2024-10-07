@@ -83,8 +83,25 @@ namespace sistema_de_asis
                     numerosesionesAsistidas = cantidadasistenias[i],
 
                 };
+                
 
             }
+
+            Console.WriteLine();
+            Console.WriteLine("Los Nombre Ingresados Fueron: ");
+            foreach (var i in cantidadnombres)
+            {
+                Console.WriteLine(i);
+            }
+
+
+
+            // Mensaje de Despedida
+
+            Console.WriteLine();
+            Console.WriteLine("Gracias por usar nuestro sistema!");
+
+
 
 
 
