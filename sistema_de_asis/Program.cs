@@ -75,7 +75,7 @@ namespace sistema_de_asis
                 } while (cantidadasistenias[i] < 0);
 
 
-                var informacion = new Universidad.Estudiante
+                var informacion = new Universidad.estudiante()
                 {
 
                     nombre = cantidadnombres[i],
@@ -83,7 +83,7 @@ namespace sistema_de_asis
                     numerosesionesAsistidas = cantidadasistenias[i],
 
                 };
-                
+                informacion.mostrarinfo();
 
             }
 
