@@ -38,10 +38,66 @@ namespace sistema_de_asis
             } while (asistenciasTotales < 0);
 
 
+            //Declaracion de Arreglos 
+
+            string[] cantidadnombres = new string[estudiante];
+            double[] cantidadasistenias = new double[estudiante];
 
 
 
-        }
+
+
+            // Arreglo que recopila la cantidad de estudiantes 
+
+
+            for (int i = 0; i < cantidadnombres.Length; i++)
+            {
+                Console.WriteLine();
+
+                Console.WriteLine($"Nombre del Estudiante {i + 1} ");
+                cantidadnombres[i] = Console.ReadLine();
+
+
+
+                // Recopilacion de sesiones que asistio el estudiante 
+                do
+                {
+
+                    Console.WriteLine("Imgrese las Sesiones Asistidas: ");
+                    cantidadasistenias[i] = Convert.ToDouble(Console.ReadLine());
+                    if (cantidadasistenias[i] < 0)
+                    {
+
+                        Console.WriteLine("Dato erroneo, Por favor Ingrese un numero Positivo");
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                }
 
 
     }
