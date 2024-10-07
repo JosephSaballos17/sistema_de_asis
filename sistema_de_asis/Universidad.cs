@@ -14,6 +14,30 @@ namespace sistema_de_asis
         public double numerosesionesTotales { get; set; }
         public double numerosesionesAsistidas { get; set; }
 
+        public class Asistencia
+        {
 
+            //Metodo para mostrar la asistencia 
+            public static double MostrarPorcentaje(double sesionesAsistidas, double sesionesTotales)
+            {
+
+                return (double)sesionesAsistidas / sesionesTotales * 100;
+
+                if (sesionesTotales == 0)
+                {
+                    return 0;
+                }
+
+
+
+
+            }
+
+
+
+
+
+
+        }
     }
 }
