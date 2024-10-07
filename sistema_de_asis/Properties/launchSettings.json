@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "sistema_de_asis": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
