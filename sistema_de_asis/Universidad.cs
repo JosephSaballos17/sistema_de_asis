@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace sistema_de_asis
 {
-    internal class Universidad
+    public class Universidad
     {
+        // Variables para el estudiante 
+
+        public string nombre { get; set; }
+        public double numerosesionesTotales { get; set; }
+        public double numerosesionesAsistidas { get; set; }
+
+
     }
 }
